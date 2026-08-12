@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#142c2d" />
+    <title>Ziyuan Zheng | Wireless Communications Researcher</title>
+    <meta name="description" content="Academic homepage of Ziyuan Zheng, researching reconfigurable intelligent surfaces, movable antennas, satellite communications, and SAGIN." />
+    <meta name="keywords" content="Ziyuan Zheng, Reconfigurable Intelligent Surface, Movable Antenna, Satellite Communications, SAGIN" />
+    <meta name="author" content="Ziyuan Zheng" />
+    <link rel="canonical" href="https://zhengziyuan.github.io/ziyuanzheng.github.io/" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23142c2d'/%3E%3Ccircle cx='46' cy='18' r='5' fill='%23d8ff45'/%3E%3Cpath d='M14 20h27L17 44h30' fill='none' stroke='%23f4f1e9' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" type="image/svg+xml" />
+    <style>
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@1,500&display=swap");
+
+:root {
+  --ink: #142c2d;
+  --ink-deep: #0c2223;
+  --paper: #f4f1e9;
+  --paper-dark: #e9e5da;
+  --acid: #d8ff45;
+  --line: rgba(20, 44, 45, 0.2);
+  --muted: #687573;
+  --mono: "DM Mono", monospace;
+  --sans: "Manrope", sans-serif;
+  --serif: "Playfair Display", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 99; opacity: 0.045; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E"); }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--acid); outline-offset: 4px; }
+.skip-link { position: fixed; top: 12px; left: 12px; z-index: 200; padding: 10px 14px; background: var(--acid); color: var(--ink); font-family: var(--mono); font-size: 11px; text-decoration: none; transform: translateY(-150%); transition: transform 160ms ease; }
+.skip-link:focus { transform: translateY(0); }
+
+.site-header { position: absolute; top: 0; left: 0; right: 0; z-index: 20; height: 94px; display: flex; align-items: center; justify-content: space-between; padding: 0 4.5vw; border-bottom: 1px solid rgba(244, 241, 233, 0.22); color: var(--paper); }
+.wordmark { position: relative; font-size: 19px; font-weight: 500; text-decoration: none; letter-spacing: -0.035em; }
+.wordmark > span:first-child { font-weight: 600; }
+.signal-dot { display: inline-block; width: 7px; height: 7px; margin-left: 5px; border-radius: 50%; background: var(--acid); box-shadow: 0 0 0 4px rgba(216, 255, 69, 0.12); }
+nav { display: flex; align-items: center; gap: 34px; }
+nav a { font-family: var(--mono); font-size: 11px; letter-spacing: 0.13em; text-decoration: none; text-transform: uppercase; transition: color 180ms ease; }
+nav a:hover, nav a:focus-visible { color: var(--acid); }
+.menu-button { display: none; }
+
+.hero { position: relative; min-height: 790px; height: min(940px, 100vh); overflow: hidden; display: grid; grid-template-columns: 58% 42%; background: var(--ink); color: var(--paper); }
+.hero::after { content: ""; position: absolute; width: 48vw; height: 48vw; left: -27vw; bottom: -33vw; border: 1px solid rgba(216, 255, 69, 0.24); border-radius: 50%; box-shadow: 0 0 0 4.5vw rgba(216, 255, 69, 0.018), 0 0 0 9vw rgba(216, 255, 69, 0.012); }
+.hero-copy { position: relative; z-index: 2; align-self: center; padding: 104px 3vw 68px 8vw; }
+.eyebrow, .kicker { margin: 0 0 31px; font-family: var(--mono); font-size: 10px; line-height: 1.6; letter-spacing: 0.15em; text-transform: uppercase; }
+.eyebrow { display: flex; align-items: center; gap: 12px; color: rgba(244, 241, 233, 0.63); }
+.eyebrow span { color: var(--acid); }
+.eyebrow i { width: 34px; height: 1px; background: rgba(244, 241, 233, 0.35); }
+h1, h2, h3, p { margin-top: 0; }
+h1 { margin-bottom: 32px; max-width: 850px; font-size: clamp(64px, 6.8vw, 111px); line-height: 0.88; letter-spacing: -0.075em; font-weight: 500; }
+h1 em, h2 em, blockquote em { color: var(--acid); font-family: var(--serif); font-weight: 500; letter-spacing: -0.04em; }
+.hero-intro { max-width: 590px; margin: 0 0 38px 3px; color: rgba(244, 241, 233, 0.68); font-size: 15px; line-height: 1.8; }
+.hero-actions { display: flex; align-items: center; gap: 32px; }
+.button { display: inline-flex; align-items: center; justify-content: space-between; gap: 28px; min-width: 205px; padding: 17px 20px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase; border: 1px solid transparent; transition: transform 180ms ease, background 180ms ease, color 180ms ease; }
+.button:hover, .button:focus-visible { transform: translateY(-2px); }
+.button-dark { background: var(--acid); color: var(--ink); }
+.button-dark:hover { background: #e4ff73; }
+.text-link { display: inline-flex; gap: 9px; align-items: center; width: fit-content; padding-bottom: 5px; border-bottom: 1px solid currentColor; font-family: var(--mono); font-size: 10px; letter-spacing: 0.09em; text-decoration: none; text-transform: uppercase; }
+.text-link span, .pub-links span, .profile-links span { transition: transform 180ms ease; }
+.text-link:hover span, .pub-links a:hover span, .profile-links a:hover span { transform: translate(2px, -2px); }
+
+.hero-visual { position: relative; min-width: 0; background: #1a3434; overflow: hidden; }
+.hero-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20, 44, 45, 0.35), transparent 25%), linear-gradient(0deg, rgba(10, 29, 29, 0.6), transparent 38%); pointer-events: none; }
+.portrait-frame { position: absolute; left: 13%; top: 17%; width: 72%; height: 72%; z-index: 2; overflow: hidden; border-radius: 51% 49% 44% 56% / 45% 42% 58% 55%; filter: saturate(0.8) contrast(1.04); box-shadow: 0 28px 70px rgba(2, 17, 17, 0.42); }
+.portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center 24%; transform: scale(1.04); }
+.orbit { position: absolute; z-index: 3; border: 1px solid rgba(216, 255, 69, 0.78); border-radius: 50%; pointer-events: none; }
+.orbit::after { content: ""; position: absolute; width: 7px; height: 7px; border-radius: 50%; background: var(--acid); box-shadow: 0 0 15px rgba(216, 255, 69, 0.85); }
+.orbit-one { width: 105%; height: 41%; left: -6%; top: 34%; transform: rotate(-13deg); }
+.orbit-one::after { right: 8%; top: 15%; }
+.orbit-two { width: 86%; height: 104%; left: 5%; top: -2%; transform: rotate(28deg); opacity: 0.35; }
+.orbit-two::after { left: 16%; bottom: 7%; }
+.coordinate { position: absolute; z-index: 5; color: rgba(244, 241, 233, 0.56); font-family: var(--mono); font-size: 8px; line-height: 1.7; letter-spacing: 0.15em; }
+.coordinate-top { top: 16%; right: 7%; text-align: right; }
+.coordinate-bottom { left: 7%; bottom: 11%; }
+.wave-mark { position: absolute; right: 6%; bottom: 8%; z-index: 5; display: flex; gap: 4px; align-items: center; }
+.wave-mark span { display: block; width: 1px; background: var(--acid); }
+.wave-mark span:nth-child(1) { height: 10px; }
+.wave-mark span:nth-child(2) { height: 24px; }
+.wave-mark span:nth-child(3) { height: 39px; }
+.wave-mark span:nth-child(4) { height: 57px; }
+.scroll-cue { position: absolute; bottom: 24px; left: 4.5vw; z-index: 5; display: flex; align-items: center; gap: 14px; color: rgba(244, 241, 233, 0.5); font-family: var(--mono); font-size: 8px; letter-spacing: 0.15em; text-decoration: none; text-transform: uppercase; }
+.scroll-cue i { width: 40px; height: 1px; background: rgba(244, 241, 233, 0.28); }
+.scroll-cue b { color: var(--acid); font-size: 14px; font-weight: 400; }
+
+.ticker { overflow: hidden; background: var(--acid); color: var(--ink); padding: 13px 0; }
+.ticker div { display: flex; width: max-content; align-items: center; animation: ticker 32s linear infinite; }
+.ticker span { font-family: var(--mono); font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; white-space: nowrap; }
+.ticker i { width: 4px; height: 4px; margin: 0 31px; border-radius: 50%; background: var(--ink); }
+@keyframes ticker { to { transform: translateX(-50%); } }
+
+.section { padding: 118px 8vw; scroll-margin-top: 40px; }
+.section-heading { max-width: 770px; margin-bottom: 63px; }
+.section-heading.horizontal { max-width: none; display: flex; justify-content: space-between; gap: 40px; align-items: flex-end; }
+.section-heading.horizontal > div { max-width: 800px; }
+.kicker { color: #71807d; margin-bottom: 22px; }
+.kicker::before { content: ""; display: inline-block; width: 22px; height: 1px; margin: 0 11px 3px 0; background: currentColor; }
+h2 { margin-bottom: 24px; font-size: clamp(45px, 5.4vw, 82px); font-weight: 500; line-height: 1; letter-spacing: -0.065em; }
+h2 em, blockquote em { color: #789c16; }
+.section-lede { max-width: 650px; color: var(--muted); font-size: 14px; line-height: 1.85; }
+.research-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.research-card { min-height: 390px; padding: 28px 30px 32px 0; display: flex; flex-direction: column; }
+.research-card + .research-card { padding-left: 30px; border-left: 1px solid var(--line); }
+.card-topline { display: flex; align-items: center; gap: 15px; color: #788581; font-family: var(--mono); font-size: 9px; }
+.card-topline i { height: 1px; flex: 1; background: var(--line); }
+.research-card h3 { max-width: 320px; margin: 52px 0 20px; font-size: 25px; font-weight: 500; line-height: 1.15; letter-spacing: -0.045em; }
+.research-card > p { color: var(--muted); font-size: 12px; line-height: 1.8; }
+.chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; padding-top: 26px; }
+.chips span, .pub-tag { padding: 6px 9px; border: 1px solid var(--line); border-radius: 100px; font-family: var(--mono); font-size: 8px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+.publications-section { background: var(--ink-deep); color: var(--paper); }
+.publications-section .kicker { color: rgba(244, 241, 233, 0.5); }
+.publications-section h2 em { color: var(--acid); }
+.publications-section .section-heading > .text-link { margin-bottom: 13px; }
+.publication-list { border-top: 1px solid rgba(244, 241, 233, 0.18); }
+.publication { display: grid; grid-template-columns: 8% 15% 1fr; gap: 26px; padding: 37px 0 39px; border-bottom: 1px solid rgba(244, 241, 233, 0.18); }
+.pub-index { color: var(--acid); font-family: var(--mono); font-size: 9px; padding-top: 6px; }
+.pub-meta { display: flex; flex-direction: column; gap: 8px; color: rgba(244, 241, 233, 0.53); font-family: var(--mono); font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; padding-top: 6px; }
+.pub-content { max-width: 870px; }
+.pub-tag { display: inline-block; margin-bottom: 15px; border-color: rgba(216, 255, 69, 0.36); color: var(--acid); }
+.pub-content h3 { margin-bottom: 11px; font-size: 25px; font-weight: 500; line-height: 1.25; letter-spacing: -0.035em; }
+.authors { margin-bottom: 15px; color: rgba(244, 241, 233, 0.53); font-size: 10px; line-height: 1.6; }
+.pub-note { max-width: 740px; margin-bottom: 19px; color: rgba(244, 241, 233, 0.62); font-size: 12px; line-height: 1.75; }
+.pub-links { display: flex; gap: 23px; }
+.pub-links a, .profile-links a { display: inline-flex; gap: 7px; font-family: var(--mono); font-size: 8px; letter-spacing: 0.09em; text-decoration: none; text-transform: uppercase; }
+.pub-links a:hover { color: var(--acid); }
+
+.about-section { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 10vw; }
+.about-quote blockquote { margin: 35px 0 0; font-size: clamp(37px, 4.6vw, 68px); line-height: 1.08; letter-spacing: -0.06em; }
+.about-details { padding-top: 48px; }
+.about-details > p { color: var(--muted); font-size: 14px; line-height: 1.9; }
+.about-details dl { margin: 40px 0 35px; border-top: 1px solid var(--line); }
+.about-details dl div { display: grid; grid-template-columns: 30% 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.about-details dt { color: var(--muted); font-family: var(--mono); font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; }
+.about-details dd { margin: 0; font-size: 11px; line-height: 1.7; }
+
+.contact-section { position: relative; overflow: hidden; padding: 115px 8vw 120px; background: var(--acid); color: var(--ink); scroll-margin-top: 40px; }
+.contact-section .kicker { color: var(--ink); }
+.contact-section h2 { position: relative; z-index: 2; max-width: 900px; font-size: clamp(59px, 8vw, 124px); }
+.contact-section h2 em { color: var(--ink); }
+.contact-section > p:not(.kicker) { position: relative; z-index: 2; max-width: 530px; margin-bottom: 32px; font-size: 13px; }
+.button-light { position: relative; z-index: 2; min-width: 330px; background: var(--paper); border-color: var(--ink); }
+.button-light:hover { background: var(--ink); color: var(--paper); }
+.profile-links { position: absolute; z-index: 3; right: 8vw; bottom: 38px; display: flex; gap: 25px; }
+.contact-orbit { position: absolute; width: 55vw; height: 55vw; right: -14vw; top: -20vw; border: 1px solid rgba(20, 44, 45, 0.24); border-radius: 50%; box-shadow: 0 0 0 6vw rgba(20, 44, 45, 0.025), 0 0 0 12vw rgba(20, 44, 45, 0.018); }
+
+footer { min-height: 120px; padding: 35px 4.5vw; display: grid; grid-template-columns: 1fr 1.5fr 1fr; align-items: center; gap: 25px; background: var(--ink-deep); color: var(--paper); }
+.wordmark-footer { justify-self: start; }
+footer p { margin: 0; color: rgba(244, 241, 233, 0.47); font-family: var(--mono); font-size: 8px; line-height: 1.6; letter-spacing: 0.07em; text-align: center; text-transform: uppercase; }
+footer p:last-child { justify-self: end; }
+.js [data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity 700ms ease, transform 700ms ease; }
+.js [data-reveal][data-visible="true"] { opacity: 1; transform: none; }
+.research-card:nth-child(2), .publication:nth-child(2) { transition-delay: 80ms; }
+.research-card:nth-child(3), .publication:nth-child(3) { transition-delay: 160ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  .js [data-reveal] { opacity: 1; transform: none; }
+}
+
+@media (max-width: 900px) {
+  .site-header { height: 78px; padding: 0 24px; }
+  .menu-button { display: flex; width: 38px; height: 38px; padding: 10px 7px; flex-direction: column; justify-content: center; gap: 6px; border: 0; background: transparent; cursor: pointer; }
+  .menu-button span { display: block; width: 100%; height: 1px; background: var(--paper); transform-origin: center; transition: transform 180ms ease; }
+  .menu-button.is-open span:first-child { transform: translateY(3.5px) rotate(45deg); }
+  .menu-button.is-open span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+  nav { display: none; position: absolute; top: 78px; left: 0; right: 0; padding: 25px; flex-direction: column; align-items: flex-start; gap: 21px; background: var(--ink-deep); border-top: 1px solid rgba(244, 241, 233, 0.18); }
+  nav.nav-open { display: flex; }
+  .hero { height: auto; min-height: 0; display: block; padding-top: 78px; }
+  .hero-copy { padding: 72px 24px 58px; }
+  .eyebrow { align-items: flex-start; flex-wrap: wrap; }
+  h1 { font-size: clamp(58px, 18vw, 92px); }
+  .hero-actions { align-items: flex-start; flex-direction: column; }
+  .hero-visual { height: 620px; }
+  .portrait-frame { left: 11%; top: 11%; width: 78%; height: 78%; }
+  .scroll-cue { display: none; }
+  .section { padding: 85px 24px; }
+  .section-heading.horizontal { align-items: flex-start; flex-direction: column; }
+  .research-grid { grid-template-columns: 1fr; }
+  .research-card { min-height: 320px; padding: 27px 0 32px; }
+  .research-card + .research-card { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+  .publication { grid-template-columns: 45px 1fr; gap: 9px 17px; }
+  .pub-index { grid-row: 1 / 3; }
+  .pub-meta { flex-direction: row; }
+  .pub-content { grid-column: 2; }
+  .about-section { grid-template-columns: 1fr; gap: 30px; }
+  .about-details { padding-top: 0; }
+  .contact-section { padding: 85px 24px 130px; }
+  .button-light { min-width: 0; max-width: 100%; word-break: break-all; }
+  .profile-links { left: 24px; right: auto; bottom: 48px; flex-wrap: wrap; }
+  footer { grid-template-columns: 1fr; padding: 35px 24px; }
+  footer p, footer p:last-child { justify-self: start; text-align: left; }
+}
+
+@media (max-width: 520px) {
+  .hero-visual { height: 500px; }
+  .portrait-frame { top: 10%; height: 80%; }
+  .publication { grid-template-columns: 32px 1fr; }
+  .pub-content h3 { font-size: 21px; }
+  .pub-links { flex-wrap: wrap; }
+}
+    </style>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zhengziyuan.github.io/ziyuanzheng.github.io/" />
+    <meta property="og:title" content="Ziyuan Zheng | Reconfiguring the wireless world" />
+    <meta property="og:description" content="Research on physically reconfigurable wireless systems, intelligent surfaces, and non-terrestrial networks." />
+    <meta property="og:image" content="https://vtsociety.org/files/ieeevts/styles/responsive_4_5_760w/public/images/contacts/ziyuan%2Dzheng%2Ejpg?h=01f7a33b&amp;itok=jozwygdp" />
+    <meta property="og:image:alt" content="Ziyuan Zheng academic homepage" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Ziyuan Zheng | Wireless Communications Researcher" />
+    <meta name="twitter:description" content="Reconfiguring the wireless world through antennas, intelligent surfaces, and satellite networks." />
+    <meta name="twitter:image" content="https://vtsociety.org/files/ieeevts/styles/responsive_4_5_760w/public/images/contacts/ziyuan%2Dzheng%2Ejpg?h=01f7a33b&amp;itok=jozwygdp" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Ziyuan Zheng home">
+        <span>Ziyuan</span> Zheng<span class="signal-dot" aria-hidden="true"></span>
+      </a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation">
+        <span></span><span></span>
+      </button>
+      <nav id="site-navigation" aria-label="Main navigation">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow"><span>Postdoctoral Researcher</span><i></i> Shanghai Jiao Tong University</p>
+          <h1>Reconfiguring<br /><em>the wireless</em><br />world.</h1>
+          <p class="hero-intro">
+            I study how antennas, intelligent surfaces, and satellite networks can move, rotate,
+            and cooperate—turning physical geometry into a new design dimension for future wireless systems.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#publications">Explore my work <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="mailto:zhengziyuan2024@sjtu.edu.cn">Get in touch <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Portrait of Ziyuan Zheng">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="portrait-frame">
+            <img src="https://vtsociety.org/files/ieeevts/styles/responsive_4_5_760w/public/images/contacts/ziyuan%2Dzheng%2Ejpg?h=01f7a33b&amp;itok=jozwygdp" alt="Ziyuan Zheng" width="601" height="601" fetchpriority="high" />
+          </div>
+          <div class="coordinate coordinate-top">31.2304° N<br />121.4737° E</div>
+          <div class="coordinate coordinate-bottom">SHANGHAI<br />CHINA</div>
+          <div class="wave-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        </div>
+
+        <a class="scroll-cue" href="#research" aria-label="Scroll to research">
+          <span>Scroll to explore</span><i></i><b aria-hidden="true">↓</b>
+        </a>
+      </section>
+
+      <section class="ticker" aria-label="Research topics">
+        <div>
+          <span>Reconfigurable Intelligent Surfaces</span><i></i>
+          <span>Movable Antennas</span><i></i>
+          <span>Satellite Communications</span><i></i>
+          <span>Space–Air–Ground Networks</span><i></i>
+          <span aria-hidden="true">Reconfigurable Intelligent Surfaces</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">Movable Antennas</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">Satellite Communications</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">Space–Air–Ground Networks</span><i aria-hidden="true"></i>
+        </div>
+      </section>
+
+      <section class="section research-section" id="research">
+        <div class="section-heading" data-reveal>
+          <p class="kicker">Research Focus</p>
+          <h2>Wireless systems that adapt <em>in space.</em></h2>
+          <p class="section-lede">My work connects physical architecture, signal processing, and experimental validation—from a single antenna’s orientation to cooperative non-terrestrial networks.</p>
+        </div>
+        <div class="research-grid">
+          <article class="research-card" data-reveal>
+            <div class="card-topline"><span>01</span><i></i></div>
+            <h3>Physically Reconfigurable Wireless Systems</h3>
+            <p>Movable and rotatable antennas, intelligent surfaces, and mechanically reconfigurable apertures that introduce geometry as a controllable radio resource.</p>
+            <div class="chips"><span>Movable antenna</span><span>Rotatable antenna</span><span>MIS</span></div>
+          </article>
+          <article class="research-card" data-reveal>
+            <div class="card-topline"><span>02</span><i></i></div>
+            <h3>Satellite &amp; Integrated Networks</h3>
+            <p>Reliable and spectrum-efficient connectivity across LEO, GEO, aerial, and terrestrial layers, with an emphasis on deployable RIS-assisted solutions.</p>
+            <div class="chips"><span>SatCom</span><span>SAGIN</span><span>Multi-satellite</span></div>
+          </article>
+          <article class="research-card" data-reveal>
+            <div class="card-topline"><span>03</span><i></i></div>
+            <h3>Optimization &amp; Prototyping</h3>
+            <p>From tractable signal models and optimization algorithms to proof-of-concept hardware that tests whether a new degree of freedom works in practice.</p>
+            <div class="chips"><span>Beamforming</span><span>Algorithms</span><span>Experiments</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section publications-section" id="publications">
+        <div class="section-heading horizontal" data-reveal>
+          <div><p class="kicker">Selected Publications</p><h2>Ideas, models, <em>evidence.</em></h2></div>
+          <a class="text-link" href="https://dblp.org/pid/183/1553" target="_blank" rel="noopener noreferrer">View complete list <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="publication-list">
+          <article class="publication" data-reveal>
+            <div class="pub-index">01</div><div class="pub-meta"><span>2026</span><span>IEEE TWC</span></div>
+            <div class="pub-content">
+              <span class="pub-tag">MIS / Prototype</span>
+              <h3>Movable Intelligent Surface (MIS) for Wireless Communications: Architecture, Modeling, Algorithm, and Prototyping</h3>
+              <p class="authors">Ziyuan Zheng, Qingqing Wu, Wen Chen, Xiangming Wu, and Weiren Zhu</p>
+              <p class="pub-note">A mechanically reconfigurable intelligent surface with static phase shifts, spanning architecture, optimization, and 12.2 GHz prototype validation.</p>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/TWC.2025.3621083" target="_blank" rel="noopener noreferrer">Publisher <span aria-hidden="true">↗</span></a>
+                <a href="https://arxiv.org/abs/2412.19071" target="_blank" rel="noopener noreferrer">Open record <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="publication" data-reveal>
+            <div class="pub-index">02</div><div class="pub-meta"><span>2025</span><span>IEEE JSAC</span></div>
+            <div class="pub-content">
+              <span class="pub-tag">SatCom / RIS</span>
+              <h3>Cooperative Multi-Satellite and Multi-RIS Beamforming: Enhancing LEO SatCom and Mitigating LEO-GEO Intersystem Interference</h3>
+              <p class="authors">Ziyuan Zheng, Wenpeng Jing, Zhaoming Lu, Qingqing Wu, Haijun Zhang, and David Gesbert</p>
+              <p class="pub-note">Cooperative beamforming across satellites and RISs to improve LEO service while controlling cross-orbit interference.</p>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/JSAC.2024.3460068" target="_blank" rel="noopener noreferrer">Publisher <span aria-hidden="true">↗</span></a>
+                <a href="https://dblp.org/rec/journals/jsac/ZhengJLWZG25" target="_blank" rel="noopener noreferrer">Open record <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="publication" data-reveal>
+            <div class="pub-index">03</div><div class="pub-meta"><span>2025</span><span>IEEE TCOM</span></div>
+            <div class="pub-content">
+              <span class="pub-tag">Movable Antenna</span>
+              <h3>Two-Timescale Design for Movable Antenna-Enabled Multiuser MIMO Systems</h3>
+              <p class="authors">Ziyuan Zheng, Qingqing Wu, Wen Chen, and Guojie Hu</p>
+              <p class="pub-note">A two-timescale framework that separates antenna repositioning from fast beamforming for multiuser MIMO operation.</p>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/TCOMM.2025.3585515" target="_blank" rel="noopener noreferrer">Publisher <span aria-hidden="true">↗</span></a>
+                <a href="https://arxiv.org/abs/2410.05912" target="_blank" rel="noopener noreferrer">Open record <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="publication" data-reveal>
+            <div class="pub-index">04</div><div class="pub-meta"><span>2024</span><span>IEEE TWC</span></div>
+            <div class="pub-content">
+              <span class="pub-tag">Satellite Networks</span>
+              <h3>RIS-Aided Hotspot Capacity Enhancement for Multibeam Satellite Systems</h3>
+              <p class="authors">Ziyuan Zheng, Wenpeng Jing, Zhaoming Lu, Xiangming Wen, Qingqing Wu, and Hua Shao</p>
+              <p class="pub-note">An RIS-assisted design that reduces channel correlation for geographically clustered hotspot users in multibeam satellite systems.</p>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1109/TWC.2023.3309957" target="_blank" rel="noopener noreferrer">Publisher <span aria-hidden="true">↗</span></a>
+                <a href="https://dblp.org/pid/183/1553" target="_blank" rel="noopener noreferrer">Open record <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="about-quote" data-reveal>
+          <p class="kicker">About</p>
+          <blockquote>The radio environment does not have to be fixed. We can make <em>space itself</em> part of the design.</blockquote>
+        </div>
+        <div class="about-details" data-reveal>
+          <p>I am a postdoctoral researcher at Shanghai Jiao Tong University. I received my B.Eng. and Ph.D. degrees from Beijing University of Posts and Telecommunications in 2018 and 2024.</p>
+          <p>My research interests include reconfigurable intelligent surfaces, movable antennas, satellite communications, and space–air–ground integrated networks. I also serve on the IEEE Vehicular Technology Society Committee on Drones.</p>
+          <dl>
+            <div><dt>Current</dt><dd>Postdoctoral Researcher<br />Shanghai Jiao Tong University</dd></div>
+            <div><dt>Education</dt><dd>Ph.D., BUPT · 2024<br />B.Eng., BUPT · 2018</dd></div>
+            <div><dt>Service</dt><dd>IEEE VTS Committee on Drones<br />Member · 2026–present</dd></div>
+          </dl>
+          <a class="text-link" href="https://vtsociety.org/contact/ziyuan-zheng" target="_blank" rel="noopener noreferrer">Verified IEEE profile <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="contact-orbit" aria-hidden="true"></div>
+        <p class="kicker">Contact</p>
+        <h2>Let’s move wireless<br /><em>forward.</em></h2>
+        <p>For research discussions, academic collaboration, or speaking invitations.</p>
+        <a class="button button-light" href="mailto:zhengziyuan2024@sjtu.edu.cn">zhengziyuan2024@sjtu.edu.cn <span aria-hidden="true">↗</span></a>
+        <div class="profile-links">
+          <a href="https://orcid.org/0000-0003-4746-0496" target="_blank" rel="noopener noreferrer">ORCID <span aria-hidden="true">↗</span></a>
+          <a href="https://dblp.org/pid/183/1553" target="_blank" rel="noopener noreferrer">DBLP <span aria-hidden="true">↗</span></a>
+          <a href="https://scholar.google.com/scholar?q=%22Ziyuan+Zheng%22" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="wordmark wordmark-footer" href="#top"><span>Ziyuan</span> Zheng<span class="signal-dot" aria-hidden="true"></span></a>
+      <p>Researching physically reconfigurable wireless systems for 6G and beyond.</p>
+      <p>© <span data-current-year>2026</span> Ziyuan Zheng</p>
+    </footer>
+    <script>
+"use strict";
+
+document.documentElement.classList.add("js");
+
+const menuButton = document.querySelector(".menu-button");
+const navigation = document.querySelector("#site-navigation");
+
+function setMenu(open) {
+  if (!menuButton || !navigation) return;
+  navigation.classList.toggle("nav-open", open);
+  menuButton.classList.toggle("is-open", open);
+  menuButton.setAttribute("aria-expanded", String(open));
+  menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+}
+
+if (menuButton && navigation) {
+  menuButton.addEventListener("click", () => {
+    setMenu(menuButton.getAttribute("aria-expanded") !== "true");
+  });
+
+  navigation.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenu(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setMenu(false);
+      menuButton.focus();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) setMenu(false);
+  });
+}
+
+const revealItems = document.querySelectorAll("[data-reveal]");
+
+if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.setAttribute("data-visible", "true");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -10%", threshold: 0.05 }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+} else {
+  revealItems.forEach((item) => item.setAttribute("data-visible", "true"));
+}
+
+const year = document.querySelector("[data-current-year]");
+if (year) year.textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>
