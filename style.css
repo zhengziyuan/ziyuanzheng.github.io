@@ -134,6 +134,7 @@ h2 em, .research-philosophy em { color: #59770d; }
 .pub-links { display: flex; flex-wrap: wrap; gap: 4px 23px; }
 .pub-links a, .profile-links a { display: inline-flex; align-items: center; gap: 7px; min-height: 40px; font-family: var(--mono); font-size: 0.875rem; letter-spacing: 0.04em; text-decoration: none; text-transform: uppercase; }
 .pub-links a:hover { color: var(--acid); }
+.pub-links .code-pending { display: inline-flex; align-items: center; min-height: 40px; font-family: var(--mono); font-size: 0.875rem; letter-spacing: 0.02em; color: rgba(244, 241, 233, 0.7); }
 
 .code-section { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 8vw; background: var(--paper-dark); }
 .code-section h2 { font-size: clamp(2rem, 3.2vw, 3rem); }
